@@ -1,4 +1,6 @@
 # nginx-fancyindex
+
+## Up and Run
 This is a guide to install nginx fancyindex module.
 
 You should build nginx from source with ngx-fancyindex module as dynamic module.
@@ -59,7 +61,16 @@ systemctl status nginx
 
 Check file `example.com` for instruction on how to activate fancyindex.
 
-# resource
+## Theme
+For using themes, like https://github.com/Naereen/Nginx-Fancyindex-Theme, first clone the project, then copy the them folder (dark or light) into the website root, then update your nginx website config
+```bash
+git clone https://github.com/Naereen/Nginx-Fancyindex-Theme.git
+cp -r Nginx-Fancyindex-Theme/Nginx-Fancyindex-Theme-dark /path/to/project/root
+# copy example nginx config file
+systemctl restart nginx
+```
+
+## resource
 - https://www.nginx.com/resources/wiki/start/topics/examples/systemd/
 - https://nginx.org/en/download.html
 - https://github.com/Coozila/install-nginx-master-all-modules
